@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MadebyYssa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="addtocart.js" defer></script>
+</head>
+<body>
+    <header>
+        <div id="usernameDisplay" class="username-display"></div>
+        <div class="main">
+            <div class="logo">
+                <img src="img-logo-MadebyYssa.png">
+            </div>
+            <ul>
+                <li class="active"><a href="#"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="#" onclick="smoothScroll('about-us')">About Us</a></li>
+                <li><a href="#" onclick="smoothScroll('contact-us')">Contact Us</a></li>
+                <li><a href="#" onclick="openModal()">Registration</a></li>
+                <li><a href="#mini">Products</a></li>
+            </ul>
+        </div>
+        <div class="title">
+            <h1>Fuzzy Wire Bouquet</h1>
+        </div>
+        <div class="video">
+            <video width="400" height="680" controls loop="true" autoplay>
+                <source src="vid-FuzzyVideo.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div id="product" class="product-images">
+            <div class="product-mini">
+                <h1 id="mini">Mini</h1>
+                <select id="color-select">
+                    <option value="Pink">Pink</option>
+                    <option value="Light Pink">Light Pink</option>
+                    <option value="Sky Blue">Sky Blue</option>
+                    <option value="Lavender">Lavender</option>
+                    <option value="Red">Red</option>
+                    <!-- Add other color options here -->
+                </select>
+                <p>P160</p>
+                <img src="img-product-mini.jpg" width="250" height="250" alt="Sample of Mini">
+                <button onclick="addToCart('Mini', 'img-product-mini.jpg', 160)">Add to Cart</button>
+
+
+            </div>
+            <div class="product-standard">
+                <h1 id="standard">Standard</h1>
+                <select id="color-select">
+                    <option value="Pink">Pink</option>
+                    <option value="Light Pink">Light Pink</option>
+                    <option value="Sky Blue">Sky Blue</option>
+                    <option value="Lavender">Lavender</option>
+                    <option value="Red">Red</option>
+                    <!-- Add other color options here -->
+                </select>
+                <p>P260</p>
+                <img src="img-product-standard.jpg" width="250" height="250" alt="Sample of Standard">
+                <button onclick="addToCart('Standard', 'img-product-standard.jpg', 160)">Add to Cart</button>
+            </div>
+            <div class="product-large">
+                <h1 id="large">Large</h1>
+                <select id="color-select">
+                    <option value="Pink">Pink</option>
+                    <option value="Light Pink">Light Pink</option>
+                    <option value="Sky Blue">Sky Blue</option>
+                    <option value="Lavender">Lavender</option>
+                    <option value="Red">Red</option>
+                    <!-- Add other color options here -->
+                </select>
+                <p>P280</p>
+                <img src="img-product-large.jpg" width="250" height="250" alt="Sample of Large">
+                <button onclick="addToCart('Large', 'img-product-large.jpg', 160)">Add to Cart</button>
+            </div>
+            <div class="product-deluxe">
+                <h1 id="deluxe">Deluxe</h1>
+                <select id="color-select">
+                    <option value="Pink">Pink</option>
+                    <option value="Light Pink">Light Pink</option>
+                    <option value="Sky Blue">Sky Blue</option>
+                    <option value="Lavender">Lavender</option>
+                    <option value="Red">Red</option>
+                    <!-- Add other color options here -->
+                </select>
+                <p>P460</p>
+                <img src="img-product-deluxe.jpg" width="250" height="250" alt="Sample of Deluxe">
+                <button onclick="addToCart('Deluxe', 'img-product-deluxe.jpg', 160)">Add to Cart</button>
+            </div>
+        </div>
+        <div id="about-us" class="about">
+            <h1 id="about-us">About Us</h1>
+            <p>Welcome to MadebyYssa, where love blooms in the form of fuzzy wire bouquets!</p>
+            <p>Nestled in the heart of Manila, we are passionate about crafting unique and memorable gifts for your special moments, especially Valentine's Day.</p>
+            <p>---------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+            <p>At MadebyYssa, we believe in celebrating love in all its forms, and what better way to do so than with our enchanting fuzzy wire bouquets?</p>
+            <p>Each bouquet is meticulously handcrafted with care and attention to detail, ensuring that every piece is as unique as the love it represents!</p>
+        </div>
+        <div id="contact-us" class="contacts">
+            <h1 id="contact-us">Contact Us</h1>
+            <p>+63 960-240-1224</p>
+            <p>+63 929-843-5071</p>
+            <p>1138 Pedro Gil St, Paco, Manila, Metro Manila</p>
+            <p>Follow us on Instagram:</p>
+            <div class="iglogo">
+                <a class="instagram-link" href="https://www.instagram.com/made.byyssa/" target="_blank">
+                    <img src="img-logo-instagram.jpg" alt="Instagram">
+                </a>
+            </div>
+        </div>
+        <div id="cart">
+            <h2 id="cart-heading"> Cart</h2>
+            <ul id="cart-items"></ul>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div class="registration">
+                    <h1>Registration</h1>
+                    <form id="registration-form">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required><br><br>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br><br>
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required><br><br>
+
+                        <input type="submit" value="Register">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </header>
+</body>
+</html>
